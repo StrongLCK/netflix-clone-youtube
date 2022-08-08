@@ -21,7 +21,7 @@ function Banner({ netflixOriginals }: Props) {
       netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]
     );
   }, [netflixOriginals]);
-  // console.log(movie); //see web page, not terminal
+  console.log(movie); //see web page, not terminal
 
   return (
     // lg:h-[65vh] cannot change className of Image h-[95vh], justify-end at end of 65vh
@@ -36,7 +36,7 @@ function Banner({ netflixOriginals }: Props) {
         />
       </div>
       <h1 className="text-2xl text-shadow-xl md:text-4xl lg:text-6xl ">
-        {movie?.title || movie?.original_title}
+        {movie?.title}
       </h1>
       <p className="max-w-xs  text-xs text-shadow-md md:max-w-lg md:text-lg  lg:text-2xl lg:max-w-2xl">
         {movie?.overview}
